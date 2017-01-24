@@ -40,34 +40,36 @@
 		</a>
 		<hr></hr>
 	</div>
-	<div class="container"> <!gallery of rotating images? can fulfill class requirements and still look good for actual use>
+	<div class="container">
+		<h1>Faraday Cabinets</h1>
+		<div class="col-md-12">
+			<img id="bigImage"
+				class="hero-img"
+				src="maplecabinet.jpg"
+				alt="Maple Cabinets"/>
+		</div>
 		<div class="row">
-			<div class="col-md-12">
-				<div class="relative">
-					  <img class="hero"
-					     src=""
-					  />
-				</div>
+			<div class="col-md-3">
+				<img class="thumb-img" 
+				  src="maplecabinet.jpg" 
+				  alt="Maple Cabinets"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="thumb-img" 
+				  src="oakcabinet.jpg" 
+				  alt="display of cheese"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="thumb-img" 
+				  src="pinecabinet.jpg" 
+				  alt="synethesizer workshop"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="thumb-img" 
+				   src="walnutcabinet.jpg" 
+				   alt="City night"/> 
 			</div>
 		</div>
-	</div>
-	<div class="slider">
-		<script type="text/javascript">
-		var image = document.getElementById("maplecabinet.jpg");
-		var src = ["maplecabinet.jpg","oakcabinet.jpg","pinecabinet.jpg", ];
-		</script>
-		<!
-		<script type="text/javascript">
-			<!var image1 = new Image()
-			image1.src = "maplecabinet.jpg"
-
-			var image2 - new Image()
-			image2.src = "oakcabinet.jpg"
-
-			var image3 = new Image()
-			image3.src = "pinecabinet.jpg"
-		</script>
-
 	</div>
 	<hr></hr>
 	<div class="container">
@@ -87,31 +89,11 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		$(".thumb-img").click(function(){
+			$("#bigImage").attr('src',
+				$(this).attr('src'));
+		});
+	</script>
 	</body>
-		<script type="text/javascript">
-		var step=0
-		    function slideit() { 
-		        image.src = src[step];
-		        image.alt = src[step];
-		        if(step<3){
-		            step++;
-		        }else{
-		            step=1;
-		        }
-		    }        
-		    setInterval(slideit,5000);
-		</script>
-		<!<img src="maplecabinet.jpg" name="slide">
-		<!<script type="text/javascript">
-			<!var step = 1
-			function slideit() {
-				document.images["slide"].src = eval("image" + step + ".src")
-				if (step < 3)
-					step++
-				else
-					step = 1
-				setTimeout("slideit()", 5000)
-			}
-			slideit()
-		</script>
 </html>
